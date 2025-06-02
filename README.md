@@ -1,3 +1,7 @@
+[![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-red?logo=streamlit)](https://streamlit.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live App](https://img.shields.io/badge/Live-Dashboard-brightgreen?logo=streamlit)](https://inventory-forecast-dashboard-an3rsr4kqq85cvkypggbih.streamlit.app/)
+
 # Inventory Forecast Dashboard 📦📈
 
 A Streamlit-powered web app for demand forecasting and inventory optimization using Prophet and EOQ models.
