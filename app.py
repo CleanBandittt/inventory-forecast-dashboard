@@ -10,20 +10,19 @@ st.title("📦 AI-Powered Inventory Forecasting & Optimization")
 
 uploaded_file = st.file_uploader("Upload your retail demand CSV", type=["csv"])
 
-if uploaded_file is not None:
+if uploaded_file:
     df = pd.read_csv(uploaded_file)
 
     required_cols = {'date', 'sku_id', 'weekly_demand', 'lead_time_days', 'unit_cost', 'order_cost'}
-    if not required_cols.issubset(set(df.columns)):
+    if not required_cols.issubset(df.columns):
         st.error("CSV must contain the following columns: date, sku_id, weekly_demand, lead_time_days, unit_cost, order_cost")
     else:
         df['date'] = pd.to_datetime(df['date'])
-
         sku_list = df['sku_id'].unique().tolist()
         sku_choice = st.selectbox("Select SKU", sku_list)
         df_sku = df[df['sku_id'] == sku_choice].copy()
 
-        service_level = st.slider("Select Service Level (Z-Score Basis)", min_value=0.85, max_value=0.999, value=0.95, step=0.01)
+        service_level = st.slider("Select Service Level (Z-Score Basis)", 0.85, 0.999, 0.95, step=0.01)
 
         def forecast_demand(df_sku):
             df_prophet = df_sku[['date', 'weekly_demand']].rename(columns={'date': 'ds', 'weekly_demand': 'y'})
