@@ -10,6 +10,9 @@ st.title("📦 Inventory Forecasting & EOQ Optimization Tool")
 
 uploaded_file = st.file_uploader("Upload your retail demand CSV", type=["csv"])
 
+st.markdown("📂 Don't have a CSV? Try our [demo file](https://github.com/CleanBandittt/inventory-forecast-dashboard/blob/main/Mock_Retail_Demand_Data.csv).")
+
+
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
 
