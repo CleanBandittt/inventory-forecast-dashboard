@@ -6,7 +6,7 @@ from scipy.stats import norm
 import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Inventory Optimization Dashboard", layout="wide")
-st.title("📦 AI-Powered Inventory Forecasting & Optimization")
+st.title("📦 Inventory Forecasting & EOQ Optimization Tool")
 
 uploaded_file = st.file_uploader("Upload your retail demand CSV", type=["csv"])
 
