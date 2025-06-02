@@ -8,10 +8,9 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Inventory Optimization Dashboard", layout="wide")
 st.title("📦 Inventory Forecasting & EOQ Optimization Tool")
 
+st.info("📂 Don't have a CSV? Try our [demo file](https://github.com/CleanBandittt/inventory-forecast-dashboard/blob/main/Mock_Retail_Demand_Data.csv).")
+
 uploaded_file = st.file_uploader("Upload your retail demand CSV", type=["csv"])
-
-st.markdown("📂 Don't have a CSV? Try our [demo file](https://github.com/CleanBandittt/inventory-forecast-dashboard/blob/main/Mock_Retail_Demand_Data.csv).")
-
 
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
