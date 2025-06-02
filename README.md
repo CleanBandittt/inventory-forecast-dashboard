@@ -6,6 +6,11 @@
 
 A Streamlit-powered web app for demand forecasting and inventory optimization using Prophet and EOQ models.
 
+📎 Sample CSV
+
+A sample file (`Mock_Retail_Demand_Data.csv`) is included in this repository.  
+You can use it to try out the dashboard right away, without having to create your own dataset.
+
 ## 📂 How to Use
 
 1. Upload your CSV file.
